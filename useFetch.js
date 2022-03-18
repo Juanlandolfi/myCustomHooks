@@ -27,13 +27,13 @@ export const useFetch = (url) => {
             error: null,
             data,
           });
-        } else console.log("setState no se llamo");
+        } else console.log("setState was not call");
       })
       .catch(() => {
         setState({
           data: null,
           loading: false,
-          error: "No se pudo cargar la info",
+          error: "Could not load data",
         });
       });
   }, [url]);
